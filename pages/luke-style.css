@@ -9,12 +9,13 @@
 
 body {
     margin: 0;
-    font-family: sans-serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     background: #f5f6f7;
 }
 
 nav {
     padding: 1px;
+    padding-left: 20px;
     background-color: #C8102e;
     color: #fff;
     margin: 0px;
