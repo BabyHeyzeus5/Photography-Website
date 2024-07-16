@@ -2,9 +2,9 @@ import os
 from PIL import Image
 
 #----------EDIT THESE-----------------#
-targetFolder = "C:\\Users\\nebra\\OneDrive\\Desktop\\Coding Projects\\Photography Website\\pages\\albums\\spring break"
-targetFile = "C:\\Users\\nebra\\OneDrive\\Desktop\\Coding Projects\\Photography Website\\pages\\springBreak.html"
-albumName = "spring break"
+targetFolder = ".\\pages\\albums\\luke-grad"
+targetFile = ".\\pages\\luke-grad.html"
+albumName = targetFolder.split("\\")[-1]
 
 
 def compressImages(folder):
@@ -13,7 +13,7 @@ def compressImages(folder):
     for photo in photos:
         filePath = os.path.join(targetFolder, photo)
         picture = Image.open(filePath)
-        picture.save(filePath,"JPEG", optimize = True, subsamppling = 0, quality = 50)
+        picture.save(filePath,"JPEG", optimize = True, subsamppling = 0, quality = 50, exif=picture.info.get("exif"))
         i += 1
         print(f"finished {i} photos")
     return

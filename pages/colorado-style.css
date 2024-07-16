@@ -15,10 +15,10 @@ body {
 
 nav {
     padding: 1px;
-    background-color: #0a0a23;
+    background-color: #1B5448;
     color: #fff;
     margin: 0px;
-    border: 0px #0a0a23;
+    border: 0px #1B5448;
     text-align: left;
 }
 
@@ -28,9 +28,9 @@ nav {
     text-transform: uppercase;
     padding: 20px;
     padding-top: 10px;
-    background-color: #0a0a23;
+    background-color: #1B5448;
     color: #fff;
-    border-bottom: 10px solid #fdb347;
+    border-bottom: 10px solid #5F433C;
 }
 
 .gallery {

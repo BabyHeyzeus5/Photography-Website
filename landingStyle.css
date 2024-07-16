@@ -2,6 +2,11 @@
     box-sizing: border-box;
 }
 
+.navlink {
+    text-decoration: none;
+    color: #fff;
+}
+
 body {
     margin: 0;
     font-family: sans-serif;
@@ -38,6 +43,7 @@ nav {
     max-width: 1400px;
     margin: 0 auto;
     padding: 20px 10px;
+    text-wrap: wrap;
 }
 
 .gallery img {
@@ -46,4 +52,14 @@ nav {
     height: 300px;
     object-fit: cover;
     border-radius: 10px;
+}
+
+.album {
+    max-width: 380px;
+    text-align: center;
+}
+
+.album-info{
+    margin: 0;
+    padding: 5px;
 }
