@@ -2,8 +2,8 @@ import os
 from PIL import Image
 
 #----------EDIT THESE-----------------#
-targetFolder = ".\\pages\\albums\\luke-grad"
-targetFile = ".\\pages\\luke-grad.html"
+targetFolder = ".\\pages\\albums\\spring-break"
+targetFile = ".\\pages\\spring-break.html"
 albumName = targetFolder.split("\\")[-1]
 
 
@@ -13,7 +13,8 @@ def compressImages(folder):
     for photo in photos:
         filePath = os.path.join(targetFolder, photo)
         picture = Image.open(filePath)
-        picture.save(filePath,"JPEG", optimize = True, subsamppling = 0, quality = 50, exif=picture.info.get("exif"))
+        exif_data = picture.info.get("exif")
+        picture.save(filePath, "JPEG", optimize=True, subsampling=0, quality=50, exif=exif_data if exif_data else b'')
         i += 1
         print(f"finished {i} photos")
     return
