@@ -107,10 +107,36 @@ footer {
     padding: 7px;
 }
 
-/* Media Queries for Responsive Design */
+/* Small devices (landscape phones, 576px and up) */
+@media (max-width: 576px) {
+    .header {
+        background-position: center;
+        height: 20rem;
+    }
+    .header .text {
+        font-size: 1.5rem;
+    }
+    nav ul li {
+        padding: 0 2px;
+    }
+    .gallery {
+        padding: 5px;
+    }
+    .album {
+        padding: 5px;
+        max-width: 275px;
+        height: auto;
+    }
+    .album-info {
+        font-size: 1rem;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
 @media (max-width: 768px) {
     .header {
         height: 30rem;
+        background-position: center;
     }
     .header .text {
         font-size: 2rem;
@@ -122,8 +148,9 @@ footer {
         padding: 10px 5px;
     }
     .album {
-        max-width: 100%;
         padding: 10px;
+        max-width: 300px;
+        height: auto;
     }
     .album-info {
         font-size: 1.2rem;
