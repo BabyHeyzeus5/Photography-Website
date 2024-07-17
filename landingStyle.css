@@ -110,8 +110,7 @@ footer {
 /* Small devices (landscape phones, 576px and up) */
 @media (max-width: 576px) {
     .header {
-        background-position: center;
-        object-fit: contain;
+        background-size: contain;
         height: 20rem;
     }
     .header .text {
@@ -139,13 +138,14 @@ footer {
 @media (max-width: 768px) {
     .header {
         height: 20rem;
-        background-position: center;
-        object-fit: contain;
+        background-size: contain;
+
     }
     .header .text {
         font-size: 2rem;
         padding-bottom: 7rem;
         padding-top: 1rem;
+        background-size: auto;
     }
     nav ul li {
         padding: 0 5px;
