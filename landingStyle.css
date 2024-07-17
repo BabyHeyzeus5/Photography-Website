@@ -1,4 +1,4 @@
-*   {
+* {
     box-sizing: border-box;
     --white: #f5f6f7;
     --black: #000;
@@ -12,6 +12,11 @@
 .navlink {
     text-decoration: none;
     color: var(--white);
+    transition: color 0.3s ease;
+}
+
+.navlink:hover {
+    color: var(--secondary);
 }
 
 body {
@@ -20,20 +25,18 @@ body {
 }
 
 .header {
-    margin: 0px;
+    margin: 0;
     height: 47rem;
     background-image: url("./pages/albums/colorado/IMG_8844.JPG");
     background-size: cover;
     background-color: var(--primary);
-    color: var(--white);
     background-attachment: fixed;
+    color: var(--white);
 }
 
 .header .text {
     font-size: 2.5rem;
     text-align: center;
-    padding-top: auto;
-    display: block;
     padding-top: 150px;
     color: var(--secondary);
 }
@@ -42,14 +45,21 @@ nav {
     display: block;
     text-align: left;
     font-size: 1.5em;
-    padding: 1px;
+    padding: 1em;
     padding-bottom: 0;
+}
+
+nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
 }
 
 nav ul li {
     display: inline-flex;
     justify-content: space-around;
     align-items: center;
+    padding: 0 10px;
 }
 
 nav img {
@@ -61,12 +71,11 @@ nav img {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: top;
+    align-items: flex-start;
     gap: 16px;
     max-width: 1400px;
     margin: 0 auto;
     padding: 20px 10px;
-    text-wrap: wrap;
 }
 
 .gallery img {
@@ -86,7 +95,7 @@ nav img {
     border-radius: 20px;
 }
 
-.album-info{
+.album-info {
     margin: 0;
     padding: 5px;
     font-size: 1.5rem;
@@ -96,4 +105,27 @@ footer {
     border-top: var(--secondary) solid 10px;
     background-color: var(--primary);
     padding: 7px;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .header {
+        height: 30rem;
+    }
+    .header .text {
+        font-size: 2rem;
+    }
+    nav ul li {
+        padding: 0 5px;
+    }
+    .gallery {
+        padding: 10px 5px;
+    }
+    .album {
+        max-width: 100%;
+        padding: 10px;
+    }
+    .album-info {
+        font-size: 1.2rem;
+    }
 }
