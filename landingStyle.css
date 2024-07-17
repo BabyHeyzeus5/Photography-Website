@@ -1,37 +1,59 @@
 *   {
     box-sizing: border-box;
+    --white: #f5f6f7;
+    --black: #000;
+    --primary: #677D6A;
+    --secondary: #D6BD98;
+    --original-blue: #0a0a23;
+    --original-yellow: #fdb347;
+    font-family: 'Trebuchet MS';
 }
 
 .navlink {
     text-decoration: none;
-    color: #fff;
+    color: var(--white);
 }
 
 body {
     margin: 0;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    background: #f5f6f7;
-}
-
-nav {
-    padding: 1px;
-    background-color: #0a0a23;
-    color: #fff;
-    margin: 0px;
-    border: 0px #0a0a23;
-    text-align: left;
-    padding-left: 20px;
+    background: var(--white);
 }
 
 .header {
     margin: 0px;
+    height: 47rem;
+    background-image: url("./pages/albums/colorado/IMG_8844.JPG");
+    background-size: cover;
+    background-color: var(--primary);
+    color: var(--white);
+    background-attachment: fixed;
+}
+
+.header .text {
+    font-size: 2.5rem;
     text-align: center;
-    text-transform: uppercase;
-    padding: 20px;
-    padding-top: 10px;
-    background-color: #0a0a23;
-    color: #fff;
-    border-bottom: 10px solid #fdb347;
+    padding-top: auto;
+    display: block;
+    padding-top: 150px;
+    color: var(--secondary);
+}
+
+nav {
+    display: block;
+    text-align: left;
+    font-size: 1.5em;
+    padding: 1px;
+    padding-bottom: 0;
+}
+
+nav ul li {
+    display: inline-flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav img {
+    max-height: 1.5em;
 }
 
 .gallery {
@@ -39,7 +61,7 @@ nav {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
+    align-items: top;
     gap: 16px;
     max-width: 1400px;
     margin: 0 auto;
@@ -49,18 +71,29 @@ nav {
 
 .gallery img {
     width: 100%;
-    max-width: 350px;
-    height: 300px;
+    max-width: 600px;
+    height: auto;
     object-fit: cover;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 
 .album {
-    max-width: 380px;
+    background-color: #d3d3d3;
+    max-width: 650px;
     text-align: center;
+    padding: 20px;
+    color: var(--primary);
+    border-radius: 20px;
 }
 
 .album-info{
     margin: 0;
     padding: 5px;
+    font-size: 1.5rem;
+}
+
+footer {
+    border-top: var(--secondary) solid 10px;
+    background-color: var(--primary);
+    padding: 7px;
 }

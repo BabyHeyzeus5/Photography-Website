@@ -48,8 +48,8 @@ nav {
 
 .gallery img {
     width: 100%;
-    max-width: 350px;
-    height: 300px;
+    max-width: 450px;
+    max-height: 450px;
     object-fit: cover;
     border-radius: 10px;
 }
