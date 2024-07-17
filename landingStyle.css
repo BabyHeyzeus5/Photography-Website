@@ -116,6 +116,8 @@ footer {
     }
     .header .text {
         font-size: 1.5rem;
+        padding-bottom: 7rem;
+        padding-top: 1rem;
     }
     nav ul li {
         padding: 0 2px;
@@ -136,12 +138,14 @@ footer {
 /* Medium devices (tablets, 768px and up) */
 @media (max-width: 768px) {
     .header {
-        height: 30rem;
+        height: 20rem;
         background-position: center;
         object-fit: contain;
     }
     .header .text {
         font-size: 2rem;
+        padding-bottom: 7rem;
+        padding-top: 1rem;
     }
     nav ul li {
         padding: 0 5px;
