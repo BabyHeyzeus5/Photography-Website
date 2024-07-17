@@ -111,6 +111,7 @@ footer {
 @media (max-width: 576px) {
     .header {
         background-position: center;
+        object-fit: contain;
         height: 20rem;
     }
     .header .text {
@@ -137,6 +138,7 @@ footer {
     .header {
         height: 30rem;
         background-position: center;
+        object-fit: contain;
     }
     .header .text {
         font-size: 2rem;
