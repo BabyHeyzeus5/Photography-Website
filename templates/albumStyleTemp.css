@@ -1,10 +1,32 @@
-*   {
+* {
     box-sizing: border-box;
 }
 
 .navlink {
     text-decoration: none;
-    color: #fff;
+    color: var(--white);
+    transition: color 0.3s ease;
+}
+
+.navlink:hover {
+    color: var(--secondary);
+}
+
+nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+nav ul li {
+    display: inline-flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 10px;
+}
+
+nav img {
+    max-height: 1.5em;
 }
 
 body {
@@ -13,25 +35,15 @@ body {
     background: #f5f6f7;
 }
 
-nav {
-    padding: 1px;
-    padding-left: 20px;
-    background-color: #0a0a23;
-    color: #fff;
-    margin: 0px;
-    border: 0px #0a0a23;
-    text-align: left;
-}
-
 .header {
-    margin: 0px;
+    margin: 0;
     text-align: center;
     text-transform: uppercase;
-    padding: 20px;
-    padding-top: 10px;
+    padding: 10px 20px;
     background-color: #0a0a23;
     color: #fff;
     border-bottom: 10px solid #fdb347;
+    height: 47rem;
 }
 
 .gallery {
@@ -71,4 +83,11 @@ nav {
     max-width: 90%;
     max-height: 90%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+footer {
+    border-top: 10px solid var(--secondary);
+    background-color: var(--primary);
+    padding: 7px;
+    color: #fff; /* Ensures the text in the footer is visible against the background */
 }

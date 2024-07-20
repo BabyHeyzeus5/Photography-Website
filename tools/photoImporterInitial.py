@@ -9,8 +9,7 @@ compress = False # True if first time import, False if just updating
 #-------------------------------------#
 targetFolder = f"Photography-Website\\pages\\albums\\{name}"
 targetFile = f"Photography-Website\\pages\\{name}.html"
-albumName = targetFolder.split("\\")[-1]
-
+albumName = name
 
 def compressImages(folder):
     photos = os.listdir(folder)

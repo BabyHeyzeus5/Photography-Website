@@ -2,10 +2,10 @@
     box-sizing: border-box;
     --white: #f5f6f7;
     --black: #000;
-    --primary: #677D6A;
-    --secondary: #D6BD98;
-    --original-blue: #0a0a23;
-    --original-yellow: #fdb347;
+    --primary: #4e6e99; /* Dark blue for header and nav */
+    --secondary: #dad5cf; /* Light beige for background */
+    --primaryOld: #677D6A;
+    --secondaryOld: #D6BD98;
     font-family: 'Trebuchet MS';
 }
 
@@ -17,36 +17,6 @@
 
 .navlink:hover {
     color: var(--secondary);
-}
-
-body {
-    margin: 0;
-    background: var(--white);
-}
-
-.header {
-    margin: 0;
-    height: 47rem;
-    background-image: url("./pages/albums/colorado/IMG_8844.JPG");
-    background-size: cover;
-    background-color: var(--primary);
-    background-attachment: fixed;
-    color: var(--white);
-}
-
-.header .text {
-    font-size: 2.5rem;
-    text-align: center;
-    padding-top: 150px;
-    color: var(--secondary);
-}
-
-nav {
-    display: block;
-    text-align: left;
-    font-size: 1.5em;
-    padding: 1em;
-    padding-bottom: 0;
 }
 
 nav ul {
@@ -64,6 +34,38 @@ nav ul li {
 
 nav img {
     max-height: 1.5em;
+}
+
+nav {
+    display: block;
+    text-align: left;
+    font-size: 1.5em;
+    padding: 1em;
+    padding-bottom: 0;
+}
+
+body {
+    margin: 0;
+    background: var(--white);
+}
+
+.header {
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    background-image: url("./pages/albums/colorado/IMG_8844.JPG");
+    background-size: cover;
+    background-color: var(--primary);
+    background-attachment: fixed;
+    color: var(--white);
+    border-bottom: 10px var(--secondary) solid;
+}
+
+.header .text {
+    font-size: 2.5rem;
+    text-align: center;
+    padding-top: 0px;
+    color: var(--secondary);
 }
 
 .gallery {
@@ -105,60 +107,4 @@ footer {
     border-top: var(--secondary) solid 10px;
     background-color: var(--primary);
     padding: 7px;
-}
-
-/* Small devices (landscape phones, 576px and up) */
-@media (max-width: 576px) {
-    .header {
-        background-size: contain;
-        height: 20rem;
-    }
-    .header .text {
-        font-size: 1.5rem;
-        padding-bottom: 7rem;
-        padding-top: 1rem;
-    }
-    nav ul li {
-        padding: 0 2px;
-    }
-    .gallery {
-        padding: 5px;
-    }
-    .album {
-        padding: 5px;
-        max-width: 275px;
-        height: auto;
-    }
-    .album-info {
-        font-size: 1rem;
-    }
-}
-
-/* Medium devices (tablets, 768px and up) */
-@media (max-width: 768px) {
-    .header {
-        height: 20rem;
-        background-size: contain;
-
-    }
-    .header .text {
-        font-size: 2rem;
-        padding-bottom: 7rem;
-        padding-top: 1rem;
-        background-size: auto;
-    }
-    nav ul li {
-        padding: 0 5px;
-    }
-    .gallery {
-        padding: 10px 5px;
-    }
-    .album {
-        padding: 10px;
-        max-width: 300px;
-        height: auto;
-    }
-    .album-info {
-        font-size: 1.2rem;
-    }
 }

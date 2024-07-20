@@ -1,10 +1,56 @@
-*   {
+:root {
+    --primary: #1B5448;
+    --secondary: #5F433C;
+}
+
+* {
     box-sizing: border-box;
 }
 
 .navlink {
     text-decoration: none;
     color: #fff;
+    transition: color 0.3s ease;
+}
+
+.navlink:hover {
+    color: var(--secondary);
+}
+
+nav {
+    display: block;
+    text-align: left;
+    padding: 1em 0 0;
+    color: #fff;
+    background-color: var(--primary);
+}
+
+nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+nav ul li {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+}
+
+nav img {
+    max-height: 1.5em;
+}
+
+.header {
+    margin: 0;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 20px;
+    padding-top: 10px;
+    background-color: var(--primary);
+    color: #fff;
+    border-bottom: 10px solid var(--secondary);
 }
 
 body {
@@ -32,27 +78,6 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-nav {
-    padding: 1px;
-    padding-left: 20;
-    background-color: #1B5448;
-    color: #fff;
-    margin: 0px;
-    border: 0px #1B5448;
-    text-align: left;
-}
-
-.header {
-    margin: 0px;
-    text-align: center;
-    text-transform: uppercase;
-    padding: 20px;
-    padding-top: 10px;
-    background-color: #1B5448;
-    color: #fff;
-    border-bottom: 10px solid #5F433C;
-}
-
 .gallery {
     display: flex;
     flex-direction: row;
@@ -71,4 +96,10 @@ nav {
     max-height: 450px;
     object-fit: cover;
     border-radius: 10px;
+}
+
+footer {
+    border-top: var(--secondary) solid 10px;
+    background-color: var(--primary);
+    padding: 7px;
 }
