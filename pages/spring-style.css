@@ -39,7 +39,7 @@ nav img {
 
 body {
     margin: 0;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Trebuchet MS';
     background: #f5f6f7;
 }
 
@@ -60,7 +60,7 @@ body {
     justify-content: center;
     align-items: center;
     gap: 16px;
-    max-width: 80%;
+    max-width: 100%;
     margin: 0 auto;
     padding: 20px 10px;
 }
@@ -97,4 +97,30 @@ footer {
     background-color: var(--primary);
     padding: 7px;
     color: #fff; /* Ensure text visibility */
+}
+
+@media (max-width: 768px){
+    nav ul li{
+        width: 20vw;
+    }
+    nav {
+        padding-bottom: 15px;
+    }
+    h1 {
+        font-size: 2rem;
+        text-align: center;
+        width: 100%;
+        margin-top: 10px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .gallery {
+        gap: 8px;
+        padding: 5px;
+    }
+    .gallery img {
+        max-width: 175px;
+    }
 }

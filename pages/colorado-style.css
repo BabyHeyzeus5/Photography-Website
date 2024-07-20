@@ -103,3 +103,29 @@ footer {
     background-color: var(--primary);
     padding: 7px;
 }
+
+
+@media (max-width: 768px){
+    nav ul li{
+        width: 20vw;
+    }
+    nav {
+        padding-bottom: 15px;
+    }
+    h1 {
+        font-size: 2rem;
+        text-align: center;
+        width: 100%;
+        margin-top: 10px;
+    }
+}
+
+
+@media (max-width: 460px) {
+    .gallery {
+        gap: 8px;
+    }
+    .gallery img {
+        max-width: 175px;
+    }
+}

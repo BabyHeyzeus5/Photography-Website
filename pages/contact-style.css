@@ -34,7 +34,7 @@ nav {
     padding: 1em 0 0;
     color: var(--white);
     background-color: var(--primary);
-    height: 10vh
+    min-height: 10vh
 }
 
 nav ul {
@@ -70,11 +70,11 @@ footer {
     background-color: var(--primary);
     padding: 7px;
     color: var(--white);
-    height: 7vh
+    min-height: 7vh
 }
 
 .contact-info {
-    height: 83vh;
+    min-height: 83vh;
     font-size: 1.5em;
     text-align: center;
 }
@@ -83,4 +83,34 @@ footer {
     font-weight: 900;
     font-size: 2em;
     list-style: none;
+}
+
+@media (max-width: 768px){
+    nav ul li{
+        width: 20vw;
+    }
+    nav {
+        padding-bottom: 15px;
+        flex-wrap: wrap;
+    }
+    h1 {
+        font-size: 2rem;
+        text-align: center;
+        width: 100%;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1{
+        font-size: 2rem;
+    }
+    .contact-info {
+        font-size: 1em;
+        padding: 5%;
+    }
+
+    .contact-info h1 {
+        font-size: 2em;
+    }
 }

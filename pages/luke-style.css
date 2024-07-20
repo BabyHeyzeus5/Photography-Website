@@ -103,3 +103,12 @@ footer {
     background-color: var(--primary);
     padding: 7px;
 }
+
+@media (max-width: 460px) {
+    .gallery {
+        gap: 8px;
+    }
+    .gallery img {
+        max-width: 175px;
+    }
+}

@@ -72,7 +72,7 @@ footer {
 
 .intro {
     text-align: center;
-    height: 95vh;
+    min-height: 95vh;
     font-size: 1.5rem;
     background-color: var(--primary);
     color: var(--white);
@@ -97,7 +97,7 @@ footer {
     text-align: center;
     background-color: var(--secondary);
     color: var(--text-primary);
-    height: 50vh;
+    min-height: 50vh;
 }
 
 .funFacts h2 {
@@ -107,7 +107,7 @@ footer {
 .history {
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     gap: 16px;
@@ -119,8 +119,9 @@ footer {
 
 .snippet {
     width: 100%;
-    max-width: 625px;
+    max-width: 600px;
     position: relative;
+    min-width: 400px;
 }
 
 .snippet img {
@@ -209,4 +210,67 @@ footer {
 .button:hover {
     color: var(--hover-secondary);
     background-color: var(--hover-primary);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul li{
+        width: 20vw;
+    }
+    nav {
+        padding-bottom: 15px;
+    }
+    h1 {
+        font-size: 2rem;
+        text-align: center;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .intro {
+        padding: 0 10%;
+    }
+
+    .intro img {
+        max-width: 80vw;
+    }
+
+
+    .spotlight {
+        flex-direction: column;
+        padding: 5px;
+    }
+
+    .spotlight div {
+        width: 100%;
+    }
+
+    .spotlight img {
+        padding: 0;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .intro {
+        font-size: 1rem;
+        padding: 0 5%;
+    }
+
+
+    .funFacts {
+        font-size: 1rem;
+    }
+
+    .spotlight h4 {
+        font-size: 1.5rem;
+    }
+
+    .spotlight div {
+        font-size: 1rem;
+    }
 }
