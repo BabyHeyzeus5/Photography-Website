@@ -135,7 +135,7 @@ footer {
     }
 
     .header p {
-        color: var(--secondaryOld);
+        color: var(--black);
     }
 
     .gallery {
