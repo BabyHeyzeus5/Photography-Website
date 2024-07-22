@@ -4,7 +4,7 @@ from PIL import Image
 #----------CONFIGURATIONS-------------#
 
 name = 'spring-break' #album/file name (SHOULD BE THE SAME)
-compress = False # True if first time import, False if just updating
+compress = True # True if first time import, False if just updating
 
 #-------------------------------------#
 targetFolder = f".\\pages\\albums\\{name}"
@@ -32,7 +32,7 @@ def compressImages(folder):
 
 def generateHTML(folder):
     photos = os.listdir(folder)
-    html_string = "\t\t\t<img src=\".\\albums\\{}\\{}\" alt=\"Photo in Album\" class=\"preview-size\">\n"
+    html_string = "\t\t\t<img src=\"./albums/{}/{}\" alt=\"Photo in Album\" class=\"preview-size\">\n"
     messageList = []
     for photo in photos:
         messageList.append(html_string.format(albumName, photo, albumName, photo))
