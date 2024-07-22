@@ -4,11 +4,11 @@ from PIL import Image
 #----------CONFIGURATIONS-------------#
 
 name = 'spring-break' #album/file name (SHOULD BE THE SAME)
-compress = True # True if first time import, False if just updating
+compress = False # True if first time import, False if just updating
 
 #-------------------------------------#
-targetFolder = f"..\\albums\\{name}"
-targetFile = f"..\\{name}.html"
+targetFolder = f".\\pages\\albums\\{name}"
+targetFile = f".\\pages\\{name}.html"
 albumName = name
 
 def compressImages(folder):
