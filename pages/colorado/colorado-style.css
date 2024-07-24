@@ -1,0 +1,131 @@
+:root {
+    --primary: #1B5448;
+    --secondary: #5F433C;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.navlink {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.navlink:hover {
+    color: var(--secondary);
+}
+
+nav {
+    display: block;
+    text-align: left;
+    padding: 1em 0 0;
+    color: #fff;
+    background-color: var(--primary);
+}
+
+nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+nav ul li {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+}
+
+nav img {
+    max-height: 1.5em;
+}
+
+.header {
+    margin: 0;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 20px;
+    padding-top: 10px;
+    background-color: var(--primary);
+    color: #fff;
+    border-bottom: 10px solid var(--secondary);
+}
+
+body {
+    margin: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background: #f5f6f7;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.enlargedImage {
+    max-width: 90%;
+    max-height: 90%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.gallery {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 20px 10px;
+}
+
+.gallery img {
+    width: 100%;
+    max-width: 450px;
+    max-height: 450px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+footer {
+    border-top: var(--secondary) solid 10px;
+    background-color: var(--primary);
+    padding: 7px;
+}
+
+
+@media (max-width: 768px){
+    nav ul li{
+        width: 20vw;
+    }
+    nav {
+        padding-bottom: 15px;
+    }
+    h1 {
+        font-size: 2rem;
+        text-align: center;
+        width: 100%;
+        margin-top: 10px;
+    }
+}
+
+
+@media (max-width: 460px) {
+    .gallery {
+        gap: 8px;
+    }
+    .gallery img {
+        max-width: 175px;
+    }
+}

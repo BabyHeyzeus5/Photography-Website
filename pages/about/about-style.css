@@ -1,0 +1,276 @@
+:root {
+    --white: #ffffff;
+    --black: #000000;
+    --primary: #4e6e99; /* Dark blue for header and nav */
+    --secondary: #dad5cf; /* Light beige for background */
+    --hover-primary: #3b5e8a; /* Slightly darker blue for hover states */
+    --hover-secondary: #bfb9b2; /* Slightly darker beige for hover states */
+    --text-primary: #333333; /* Dark gray for text */
+    --text-secondary: #4e6e99; /* Dark blue for headings */
+    --overlay-bg: rgba(0, 0, 0, 0.8); /* Dark overlay background */
+    font-family: 'Trebuchet MS';
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+h1 {
+    font-size: 3.5rem;
+}
+
+.navlink {
+    text-decoration: none;
+    color: var(--white);
+    transition: color 0.3s ease;
+}
+
+.navlink:hover {
+    color: var(--secondary);
+}
+
+nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+nav ul li {
+    display: inline-flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 10px;
+}
+
+nav img {
+    max-height: 1.5em;
+}
+
+nav {
+    display: block;
+    text-align: left;
+    font-size: 1.5em;
+    padding: 1em;
+    padding-bottom: 0;
+    background-color: var(--primary);
+}
+
+body {
+    margin: 0;
+    background-color: var(--secondary); /* Light beige background for body */
+    color: var(--text-primary); /* Dark gray text color */
+}
+
+
+footer {
+    border-top: var(--secondary) solid 10px;
+    background-color: var(--primary);
+    padding: 7px;
+    color: var(--white);
+}
+
+.intro {
+    text-align: center;
+    min-height: 95vh;
+    font-size: 1.5rem;
+    background-color: var(--primary);
+    color: var(--white);
+    padding: 0 20%;
+}
+
+.intro h2 {
+    color: var(--text-primary);
+}
+
+.intro img {
+    width: 100%;
+    max-width: 40vw;
+    max-height: 65vh;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.funFacts {
+    padding-top: 10px;
+    font-size: 1.5rem;
+    text-align: center;
+    background-color: var(--secondary);
+    color: var(--text-primary);
+    min-height: 50vh;
+}
+
+.funFacts h2 {
+    color: var(--text-secondary);
+}
+
+.history {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    max-width: 1900px;
+    margin: 0 auto;
+    padding: 20px;
+    color: var(--text-primary);
+}
+
+.snippet {
+    width: 100%;
+    max-width: 600px;
+    position: relative;
+    min-width: 400px;
+}
+
+.snippet img {
+    height: auto;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.img-wrap {
+    position: relative;
+}
+
+.snippet .description {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(88, 88, 88, 0.72);
+    color: var(--white);
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.2s, visibility 0.2s;
+}
+
+.img-wrap:hover .description {
+    visibility: visible;
+    opacity: 1;
+}
+
+.gear {
+    text-align: center;
+    color:var(--text-secondary);
+    font-size: 1.5rem;
+}
+
+.spotlight {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding: 5px 5% 15px 5%;
+    gap: 20px;
+    align-items: stretch;
+    justify-content: center;
+    width: 100%;
+    color: var(--text-primary);
+    min-height: 55vh;
+
+}
+
+.spotlight h4 {
+    padding: 0 0 0 0;
+    color: var(--text-secondary);
+    font-size: 2rem;
+}
+
+.spotlight .information ul {
+    display: inline-block;
+    padding-left: 0;
+    text-align: left;
+}
+
+.spotlight div {
+    width: 50%;
+    font-size: 1.5rem;
+    max-height: 900px;
+}
+
+.spotlight img {
+    border-radius: 50px;
+    object-fit: cover;
+    width: 100%;
+    max-height: 900px;
+    padding: 0 20px 0 20px;
+}
+
+.button {
+    text-decoration: none;
+    color: var(--white);
+    background-color: var(--primary);
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.button:hover {
+    color: var(--hover-secondary);
+    background-color: var(--hover-primary);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul li{
+        width: 20vw;
+    }
+    nav {
+        padding-bottom: 15px;
+    }
+    h1 {
+        font-size: 2rem;
+        text-align: center;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .intro {
+        padding: 0 10%;
+    }
+
+    .intro img {
+        max-width: 80vw;
+    }
+
+
+    .spotlight {
+        flex-direction: column;
+        padding: 5px;
+    }
+
+    .spotlight div {
+        width: 100%;
+    }
+
+    .spotlight img {
+        padding: 0;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .intro {
+        font-size: 1rem;
+        padding: 0 5%;
+    }
+
+
+    .funFacts {
+        font-size: 1rem;
+    }
+
+    .spotlight h4 {
+        font-size: 1.5rem;
+    }
+
+    .spotlight div {
+        font-size: 1rem;
+    }
+}
