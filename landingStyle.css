@@ -83,10 +83,9 @@ body {
 .gallery img {
     width: 100%;
     max-width: 600px;
-    height: auto;
+    min-height: 48vh;
     object-fit: cover;
     border-radius: 5px;
-    min-height: 900px;
 }
 
 .album {
@@ -96,6 +95,7 @@ body {
     padding: 20px;
     color: var(--primary);
     border-radius: 20px;
+    min-height: 51vh;
 }
 
 .album-info {
@@ -157,6 +157,7 @@ footer {
     }
     .album img {
        max-width: 98%;
+       min-height: 30vh
     }
     .album h4 {
         font-size: 1rem;
