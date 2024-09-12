@@ -18,8 +18,11 @@ def compressImages(folder, compress):
             print(filePath)
             picture = Image.open(filePath)
             exif_data = picture.info.get("exif")
+            picture.thumbnail([3000,2000], Image.ANTIALIAS)
             #save and add to count
-            picture.save(filePath, "JPEG", optimize=True, subsampling=0, quality=compressionVal, exif=exif_data if exif_data else b'')
+            filePath = filePath.replace("JPG", "png")
+            filePath = filePath.replace("jpg", "png")
+            picture.save(filePath, "PNG")
             i += 1
             print(f"finished compressing {i} photos")
     return
@@ -29,6 +32,8 @@ def generateHTML(folder, name):
     html_string = "\t\t\t<img src=\"../albums/{}/{}\" alt=\"Photo in Album\" class=\"preview-size\">\n"
     messageList = []
     for photo in photos:
+        if "JPG" in photo or "jpg" in photo:
+            continue
         messageList.append(html_string.format(name, photo))
     return messageList
 
