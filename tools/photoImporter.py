@@ -14,11 +14,13 @@ def compressImages(folder, compress):
         compressionVal = 50
         #loop through photos
         for photo in photos:
+            if "png" in photo:
+                continue
             filePath = os.path.join(folder, photo)
             print(filePath)
             picture = Image.open(filePath)
             exif_data = picture.info.get("exif")
-            picture.thumbnail([3000,2000], Image.ANTIALIAS)
+            picture.thumbnail([3000,2000])
             #save and add to count
             filePath = filePath.replace("JPG", "png")
             filePath = filePath.replace("jpg", "png")
