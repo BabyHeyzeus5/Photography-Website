@@ -95,7 +95,7 @@ body {
     padding: 20px;
     color: var(--primary);
     border-radius: 20px;
-    height: 63vh;
+    min-height: 63;
 }
 
 .album-info {
