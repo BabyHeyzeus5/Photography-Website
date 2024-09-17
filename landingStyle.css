@@ -134,7 +134,6 @@ footer {
 
     .header {
         background-image: url("./pages/albums/spring-break/IMG_6522.png");
-        background-size: contain;
         max-height: fit-content;
     }
 
