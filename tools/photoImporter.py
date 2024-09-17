@@ -19,8 +19,7 @@ def compressImages(folder, compress):
             filePath = os.path.join(folder, photo)
             print(filePath)
             picture = Image.open(filePath)
-            exif_data = picture.info.get("exif")
-            picture.thumbnail([3000,2000])
+            picture.thumbnail([1500,1500])
             #save and add to count
             filePath = filePath.replace("JPG", "png")
             filePath = filePath.replace("jpg", "png")
