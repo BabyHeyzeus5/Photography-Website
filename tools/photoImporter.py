@@ -30,7 +30,7 @@ def compressImages(folder, compress):
 
 def generateHTML(folder, name):
     photos = os.listdir(folder)
-    html_string = "\t\t\t<img src=\"../albums/{}/{}\" alt=\"Photo in Album\" class=\"preview-size\">\n"
+    html_string = "\t\t\t<img src=\"../albums/{}/{}\" alt=\"Photo in Album\" class=\"preview-size\"  loading=\"lazy\">\n"
     messageList = []
     for photo in photos:
         if "JPG" in photo or "jpg" in photo:
